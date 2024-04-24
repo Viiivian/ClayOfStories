@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* eric css ends */
+
+/* 共用區 */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+}
+.topbar h1 {
+    flex: 1
+}
+.logo img {
+    width: 230px
+}
+.topbar nav {
+    flex: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:0 15px; */
+}
+.topbar ul {
+    display: flex;
+}
+.topbar .menu{
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(./indexPic/search.svg);
+}
+.icon-user {
+    background-image: url(./indexPic/user.svg);
+}
+.icon-fqa {
+    background-image: url(./indexPic/help.svg);
+}
+.icon-cart {
+    background-image: url(./indexPic/shopping-cart.svg);
+}
+
+/* banner */
+#banner {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: #FFF9E2
+}
+#banner img {
+    width: 590px;
+    height: 590px;
+    margin-left: 20px;
+}
+#banner .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.banner-intro>* {
+    padding: 20px 0;
+    margin: 20px 0;
+    line-height: 2em
+}
+.banner-intro h2 {
+    font-size: 66px;
+    text-align: left;
+}
+.banner-intro p {
+    font-size: 25px;
+    text-align: left;
+}
+.banner-link span {
+    /* display: inline-block; */
+    font-size: 24px;
+    text-align: right;
+    border-bottom: 1px solid black;
+    float: right;
+}
+
+/* slogan One */
+#sloganOne{
+    background-color: #E3ECFF
+}
+
+#sloganOne .container >* {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    padding: 10px 20px;
+    text-align: center;
+}
+/* 跑馬燈特效 */
+#sloganOne .container {
+    display: flex;
+    overflow: hidden;
+    width: calc(100% - 40px); /* 总宽度减去左右各20px的空白距离 */
+    margin: 0 auto; /* 让跑马灯居中显示 */
+    
+}
+.promoteAd1 p{
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    padding: 0 20px;
+}
+.promoteAd2 p{
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 30s linear infinite;
+    padding: 0 20px;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes marquee2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* category */
+#category{
+    background-color: #FFF9E2;
+    display: flex;
+    padding: 20px 20px;
+    justify-content: space-between;
+}
+#category .container1, .container2, .container3, .container4{
+    width: 250px;
+    height: 230px;  
+}
+#category .container1{
+    background-image: url(./indexPic/category-bgk1.png);
+}
+#category .container2{
+    background-image: url(./indexPic/category-bgk2.png);
+}
+#category .container3{  
+    background-image: url(./indexPic/category-bgk3.png); 
+}
+#category .container4{
+    background-image: url(./indexPic/category-bgk4.png);
+}
+
+#category span{
+    border-bottom: 1px solid black;
+}
+
+/* customized */
+#customized .container{
+    background-color: #FFC7C2;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px
+}
+
+#customized .icons{
+    display: flex;
+    flex-direction: column;
+}
+
+/* sloganTwo */
+#sloganTwo{
+    background-color: #E3ECFF
+}
+
+#sloganTwo .container >* {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    padding: 10px 20px;
+    text-align: center;
+}

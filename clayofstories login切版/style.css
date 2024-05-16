@@ -1,0 +1,415 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* eric css ends */
+
+/* 共用區 */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+}
+.topbar h1 {
+    flex: 1
+}
+.logo img {
+    width: 230px
+}
+.topbar nav {
+    flex: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:0 15px; */
+}
+.topbar ul {
+    display: flex;
+}
+.topbar .menu{
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(./images/search.svg);
+}
+.icon-user {
+    background-image: url(./images/user.svg);
+}
+.icon-fqa {
+    background-image: url(./images/help.svg);
+}
+.icon-cart {
+    background-image: url(./images/shopping-cart.svg);
+}
+
+/* 共用區 */
+* { 
+    box-sizing: border-box;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+    font-family: 'Noto Sans Carian';
+}
+.topbar h1 {
+    flex: 1;
+}
+.logo img {
+    width: 230px;
+}
+.topbar nav {
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.topbar ul {
+    display: flex;
+}
+.topbar menu {
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(images/search.svg);
+}
+.icon-user {
+    background-image: url(images/user.svg);
+}
+.icon-faq {
+    background-image: url(images/help.svg);
+}
+.icon-cart {
+    background-image: url(images/shopping-cart.svg);
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    background-color: #FFC7C2;
+    background-image: url(images/Union.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding-top: 100px;
+}
+.kittielogin {
+    position: relative;
+}
+@keyframes tongueAnimation {
+    0% {
+        width: 37px;
+        height: 100px; /* 初始高度 */
+    }
+    100% {
+        width: 37px;
+        height: 50px; /* 最小高度 */
+    }
+}
+.tongue {
+    position: absolute;
+    width: 37px;
+    height: 100px;
+    top: 52%;
+    right: 48.7%;
+    transform-origin: top;
+    transform: rotateX(60deg);
+    animation: tongueAnimation 0.3s infinite alternate;
+}
+.loginform {
+    position: absolute;
+    top: 60%;
+}
+#form-login {
+    width: 376px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form-login > * {
+    display: block;
+    width: 100%;
+}
+#form-login label{
+    margin: 5px 0 5px;
+    font-size: .8rem;
+}
+#form-login input {
+    padding: 7px;
+    color: #666565;
+    border: 1px solid #C8C8C8;
+    border-radius: 3px;
+}
+#form-login input::placeholder {
+    color: #D1CECE;
+    font-size: .8rem;
+    
+}
+#password {
+    width: 376px;
+    position: relative;
+}
+.eye {
+    float: right;
+    width: 28px;
+    height: 16px;
+    position: absolute;
+    top: 31%;
+    right: 10px; 
+    transform: translateY(-100%);
+    background-size: cover; 
+    cursor: pointer;
+}
+.loginform a {
+    padding-left: 73.5%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    font-size: 12px;
+}
+.forgotpassword::after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: 130px;
+    width:100%;
+    height: 2px;
+    background-color: #D1CECE;
+}
+#media-login {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.fb {
+    background-image: url(images/Facebook.png);
+    background-size: 30px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    border-radius: 50px;
+    border-style: none;
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.google {
+    background-image: url(images/Google.png);
+    background-size: 30px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    border-radius: 50px;
+    border-style: none;
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#signin-login {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signin {
+    border-radius: 50px;
+    border-style: none;
+    width: 165px;
+    height: 59px;
+    font-size: 20px;
+    background-color: #FFC7C2;
+    cursor: pointer;
+}
+.create {
+    margin-top: 3%;
+    border-radius: 50px;
+    border-style: none;
+    width: 165px;
+    height: 26px;
+    font-size: 14px;
+    cursor: pointer;
+}

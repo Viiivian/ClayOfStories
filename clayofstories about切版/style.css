@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* eric css ends */
+
+<style type = "text/css" media="screen, print">
+@font-face {
+font-family: "Newyork";
+src: url("https://www.dafont.com/newyork.font";) ;
+}
+
+body { font-family: "Newyork", serif }
+</style>
+
+/* 共用區 */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+}
+.topbar h1 {
+    flex: 1
+}
+.logo img {
+    width: 230px
+}
+.topbar nav {
+    flex: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:0 15px; */
+}
+.topbar ul {
+    display: flex;
+}
+.topbar .menu{
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(./images/search.svg);
+}
+.icon-user {
+    background-image: url(./images/user.svg);
+}
+.icon-fqa {
+    background-image: url(./images/help.svg);
+}
+.icon-cart {
+    background-image: url(./images/shopping-cart.svg);
+}
+
+/* 共用區 */
+* { 
+    box-sizing: border-box;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+    font-family: 'Noto Sans Carian';
+}
+.topbar h1 {
+    flex: 1;
+}
+.logo img {
+    width: 230px;
+}
+.topbar nav {
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.topbar ul {
+    display: flex;
+}
+.topbar menu {
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(images/search.svg);
+}
+.icon-user {
+    background-image: url(images/user.svg);
+}
+.icon-faq {
+    background-image: url(images/help.svg);
+}
+.icon-cart {
+    background-image: url(images/shopping-cart.svg);
+}
+
+/* banner */
+#banner {
+    display: flex;
+    justify-content: center;
+    background-color: #FFF9E2;
+    padding-top: 100px;
+}
+#banner .container {
+    margin-right: 200px;
+}
+#banner .container img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 60px;
+}
+#banner .container h2{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#banner .container {
+    display: flex;
+    flex-direction: column;
+}
+#banner .star {
+    padding: 80px 60px;
+}
+
+
+#page2 {
+    background-color: #FFF9E2;
+    background-image: url(images/bkg-white.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+#aboutus {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 200px;
+    max-width: 1440px;
+}
+#aboutus .container{
+    width: 594px;
+    text-align: center;
+    margin-top: 250px;
+}
+#aboutus h1{
+    font-size: 60px;
+    
+}
+#aboutus p{
+    margin-top: 50px;
+    margin-left: 75px;
+    font-size: 20px;
+    font-family: 'Noto Sans Carian';
+    letter-spacing: 2.5px;
+    line-height: 35.8px;
+    text-align: left;
+    width: 100%;
+}
+
+#choose {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 170px;
+    margin-top: 150px;
+}
+#choose h1 {
+    font-size: 60px;
+    text-align: center;
+}
+#choose p{
+    font-size: 20px;
+    font-family: 'Noto Sans Carian';
+    letter-spacing: 2.5px;
+    line-height: 35.8px;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 55px;
+    width: 100%;
+}
+#choose .polaroid {
+    position: relative;
+    margin-right: 100px;
+    width: 500px;
+    height: 500px;
+}
+#choose .photo1 {
+    position: absolute;
+}
+#choose .photo2 {
+    position: absolute;
+}
+#choose .photo1 {
+    z-index: 1;
+    transform: translate(70%, 10%);
+    object-fit: cover;
+}
+#choose .photo2 {
+    z-index: 2;
+    transform: translate(-10%, -30%);
+    object-fit: cover;
+}

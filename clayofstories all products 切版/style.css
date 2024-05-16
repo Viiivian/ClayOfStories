@@ -1,0 +1,654 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* eric css ends */
+
+<style type = "text/css" media="screen, print">
+@font-face {
+font-family: "Newyork";
+src: url("https://www.dafont.com/newyork.font"; ) ;
+}
+
+body { font-family: "Newyork", serif }
+</style>
+
+/* 共用區 */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+}
+.topbar h1 {
+    flex: 1
+}
+.logo img {
+    width: 230px
+}
+.topbar nav {
+    flex: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:0 15px; */
+}
+.topbar ul {
+    display: flex;
+}
+.topbar .menu{
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(./images/search.svg);
+}
+.icon-user {
+    background-image: url(./images/user.svg);
+}
+.icon-fqa {
+    background-image: url(./images/help.svg);
+}
+.icon-cart {
+    background-image: url(./images/shopping-cart.svg);
+}
+
+/* 共用區 */
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #FFF9E2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+    font-family: 'Noto Sans Carian';
+}
+.topbar h1 {
+    flex: 1;
+}
+.logo img {
+    width: 230px;
+}
+.topbar nav {
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.topbar ul {
+    display: flex;
+}
+.topbar menu {
+    padding-left: 20px;
+}
+.menu a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.icon a {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.icon-search {
+    background-image: url(images/search.svg);
+}
+.icon-user {
+    background-image: url(images/user.svg);
+}
+.icon-faq {
+    background-image: url(images/help.svg);
+}
+.icon-cart {
+    background-image: url(images/shopping-cart.svg);
+}
+.main {
+    background-color: #FFF9E2;
+}
+input[type="checkbox"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    width: 16px;
+    height: 16px; 
+    border-radius: 50%; 
+    border: 2px solid #555; 
+    outline: none; 
+    cursor: pointer;
+    position: relative; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: #555; 
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* 使用 Unicode 符號表示勾號 */
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    text-align: center; 
+    line-height: 14px; 
+    color: white; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.sidebarcontainer {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    font-family: 'Noto Sans Carian';
+    letter-spacing: 10%;
+}
+.sidebar {
+    width: 250px;
+    padding-right: 20px;
+}
+.sidebar input[type="checkbox"] {
+    margin-right: 8px; 
+}
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.sidebar1 {
+    width: 180px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+.sidebar li {
+    padding: 7px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.upper {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.bigstar {
+    position: relative;
+    align-items: center;
+    left: 30%; 
+}
+.bs {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    left: 67%;
+    top: 10%;
+}
+.bluevase {
+    margin-left: 32%;
+}
+.splash {
+    z-index: 1; 
+    width: 50.98px;
+    height: 39.08px;
+}
+.upper img {
+    max-width: 100%;
+    height: auto;
+}
+.upper h1 {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -420%); 
+    z-index: 1; 
+    margin: 0; 
+    font-size: 60px;
+}
+.allproducts {
+    display: flex;
+    flex-direction: column; 
+    padding-top: 30px;
+    align-items: center;
+    background-image: url(images/product\ bk.png);
+    width: 300px;
+    height: 386px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.allproducts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.allproducts:hover::before {
+    background-color: #FFA69E; /* 鼠标滑过时的背景色 */
+    z-index: 1;
+    width: 300px;
+    height: 386px;
+}
+.allproducts img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    z-index: 99;
+}
+.allproducts h3 {
+    padding-top: 230px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "Newyork";
+    z-index: 99;
+}
+.allproducts button {
+    width: 214px;
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFC7C2;
+    font-size: 20px;
+    font-family: "Newyork";
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 99;
+}
+.allproducts button:hover {
+    background-color: white; 
+    color: #FFA69E;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1010px;
+}
+.pagination{
+    font-family: 'noto sans carian';
+    font-size: 16px;
+    padding: 50px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.pagination a{
+    padding: 40px 30px;
+    color: #666;
+    text-decoration: none;
+}
+.pagination a:hover {
+    background-image: url(images/pinkyflower.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+/* custompage */
+.pinkstar {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.create {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.create img {
+    width: 100%;
+}
+.create h1 {
+    position: absolute;
+    font-size: 66px;
+    float: left;
+    margin-top: -16%;
+    margin-left: 9%;
+}
+.custombear img{
+    width: 15%;
+    float: right;
+    z-index: 98;
+    margin-top: -11.5%;
+    margin-left: 80%;
+    position: absolute;
+}
+#bluesection {
+    background-color: #E3ECFF;
+    margin-top: 50px;
+}
+#bluesection .container {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 25px 0px;
+    text-align: center;
+    font-family: 'Noto Sans Carian';
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+.threestep {
+    height: 401px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+
+}
+.threestep img{
+    width: 340px;
+    height: 262px;
+}
+.formicon {
+    width: 25%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F9E6EA;
+    border-radius: 30px;
+    font-family: 'Noto Sans Carian';
+    padding: 20px;
+}
+.formicon img{
+    width: 27%;
+    height: 40%;
+}
+.formicon h3{
+    font-size: 20px;
+    font-weight: 450;
+}
+.formicon p{
+    width: 90%;
+    text-align: center;
+}
+.pinksec {
+    background-color: #FFB9B2;
+    height: 193px;
+    padding: 0 100px;
+    position: relative;
+}
+.design {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.design h1 {
+    font-size: 50px;
+    color: white;
+    margin-top: 3%;
+}
+.design p {
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    color: white;
+    line-height: 1.5em;
+    font-family: 'Noto Sans Carian';
+    margin-top: 2%;
+}
+.design img {
+    margin-top: 2.5%;
+}
+.customizedchoices {
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    font-size: 38px;
+    padding-top: 60px;
+}
+.customizedchoices img {
+    width: 30%;
+    height: 1px;
+    margin-top: 20px;
+}
+#customorders {
+    display: flex;
+    justify-content: space-between;
+}
+#customorders button {
+    background-color: #FFB9B2;
+    color: white;
+    border: none;
+    width: 212px;
+    height: 48px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'NewYork';
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#customorders h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+#customorders p {
+    font-size: 16px;
+    font-family: 'Noto Sans Carian';
+    width: 440px;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+.leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.leftside img {
+    width: 80%;
+}
+.leftproduct {
+    height: 25%;
+    padding: 50px 0;
+    text-align: right;
+}
+.rightproduct {
+    height: 25%;
+    padding: 50px 0;
+}
+.rightside {
+    display: flex;
+    flex-direction: column;
+}
+.rightside img {
+    width: 100%;
+}
+#noideassec {
+    background-color: #FFC190;
+    margin-top: 50px;
+}
+#noideassec .container {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 25px 0px;
+    text-align: center;
+    color: white;
+    font-family: 'Noto Sans Carian';
+    font-weight: 800;
+    letter-spacing: 5px;
+}
